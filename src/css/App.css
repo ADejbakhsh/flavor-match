@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "recipe"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.recipe {
+  grid-auto-rows: minmax(30px, auto);
+  grid-area: recipe;
+  display: flex;
+  margin: 5pt;
+  background-color: blueviolet;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  background-color: aqua;
+}

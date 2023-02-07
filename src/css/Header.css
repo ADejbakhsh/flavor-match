@@ -1,0 +1,16 @@
+
+
+
+.Account_settings{
+    background-color: blue;
+    height: auto;
+    width: 30pt;
+    margin-left: 20pt;
+  }
+  
+  .Cart{
+    background-color: rgb(255, 0, 106);
+    height: auto;
+    width: 30pt;
+    margin-right: 20pt;
+  }
