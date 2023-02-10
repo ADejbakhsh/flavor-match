@@ -24,6 +24,7 @@
   display: flex;
   margin: 5pt;
   background-color: blueviolet;
+  border-radius: 20pt; /*TODO is it needed ? 10/02/22*/
 }
 
 .footer {

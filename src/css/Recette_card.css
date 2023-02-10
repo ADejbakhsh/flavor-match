@@ -1,0 +1,44 @@
+.placeholder {
+    position: relative;
+}
+
+
+/*TODO this is no oocss valide*/
+img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8pt;
+
+}
+
+
+/*TODO this is no oocss valide*/
+.bottom-left {
+    position: absolute;
+    color: white;
+    padding: 0pt 1pt 0pt 1pt;
+    z-index: 1;
+    bottom: 20%;
+    left: 5%;
+}
+
+/*
+-webkit-text-stroke: 0.2pt #535353;
+background-color: #26262661;
+border: 10pt;
+border-radius: 10pt;
+*/
+
+.card-title {
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.card-text {
+    background-color: #26262661;
+    border-radius: 5pt;
+    width: fit-content;
+    padding: 0pt 1pt 1pt 1pt;
+}
