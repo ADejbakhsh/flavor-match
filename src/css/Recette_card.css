@@ -1,5 +1,9 @@
 .placeholder {
     position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8pt;
+    background-color: blanchedalmond;
 }
 
 
@@ -10,7 +14,6 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 8pt;
-
 }
 
 
@@ -41,4 +44,19 @@ border-radius: 10pt;
     border-radius: 5pt;
     width: fit-content;
     padding: 0pt 1pt 1pt 1pt;
+}
+
+/*TODO 🚧*/
+.step{
+    color: black;
+    padding: 1pt 1pt 1pt 1pt;
+}
+
+.step-number{
+    text-decoration: solid;
+    font-size: large;
+}
+
+.step-text{
+    padding: 0pt 0pt 0pt 0pt;
 }
