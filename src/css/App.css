@@ -24,11 +24,14 @@
   display: flex;
   margin: 5pt;
   background-color: blueviolet;
-  border-radius: 20pt; /*TODO is it needed ? 10/02/22*/
+  border-radius: 20pt;
+  /*TODO is it needed ? 10/02/22*/
 }
 
 .footer {
   grid-area: footer;
   display: flex;
   background-color: aqua;
+  justify-content: space-around;
+  align-items: center;
 }
