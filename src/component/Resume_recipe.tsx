@@ -5,11 +5,12 @@ interface resume_recipe_t {
     recipe_name: string,
     time: number,
     price: number,
-    equipement: string[]
+    equipement: string[],
+    hastag: string[]
 }
 
 
-function Resume_recipe({ recipe_name, time, price, equipement }: resume_recipe_t) {
+function Resume_recipe({ recipe_name, time, price, equipement, hastag }: resume_recipe_t) {
 
     // Change le int prix en emoji
     let string_price = ""
@@ -31,6 +32,8 @@ function Resume_recipe({ recipe_name, time, price, equipement }: resume_recipe_t
             <div className="card-text">{time} min </div>
             <div className="card-text">{string_price}</div>
             <div className="card-text">{list_equipement}</div>
+            <div className="card-text">{hastag}</div>
+
         </>
     )
 }

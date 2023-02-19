@@ -13,6 +13,7 @@ function Recette_card() {
     const price = 2
     const equipement = ["Four", "Four"] // on vois pour la langue en back
     const recipe = ["Dans un saladier verser tout les ingredient sec", "pres chauffer le four a 200°", "mettre la pate dans le four", "blablabla touyeille ", "Enfourné la pizza et yala"]
+    const hastag = ["#pizza", "#italie", "#tomate", "#fromage"]
 
     // parfois ca double click je ne sait pas pourquoi
     function boolClick() {
@@ -29,6 +30,7 @@ function Recette_card() {
                         time={time}
                         price={price}
                         equipement={equipement}
+                        hastag={hastag}
                     />
                 </div>
             </>
