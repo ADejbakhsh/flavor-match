@@ -1,13 +1,16 @@
 import React from "react"
 import "../css/Footer.css"
 
-function Footer() {
-    // returne ❌  ✅
+interface footer_t {
+    onDeciding: React.MouseEventHandler<HTMLButtonElement>
+}
+
+function Footer({ onDeciding }: footer_t) {
     return (
         <>
-            <div className="button">❌</div>
-            <div className="button">💬</div>
-            <div className="button">💛</div>
+            <button className="button" onClick={onDeciding}>❌</button>
+            <button className="button">💬</button>
+            <button className="button" onClick={onDeciding}>💛</button>
         </>
     )
 }
