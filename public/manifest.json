@@ -19,7 +19,9 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "fullscreen",
+  "background_color": "#ff6600",
+  "theme_color": "#ff6600",
+  "description": "Food Tryst is a food matching app.",
+  "orientation": "portrait"
 }
