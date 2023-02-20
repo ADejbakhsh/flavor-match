@@ -5,7 +5,7 @@ import { recette_t } from "../types/global"
 
 
 interface recette_card_t {
-        full_recipe: recette_t
+    full_recipe: recette_t
 }
 
 function Recette_card({ full_recipe }: recette_card_t) {
