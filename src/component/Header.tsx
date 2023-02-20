@@ -5,13 +5,13 @@ interface header_t {
     number: number
 }
 
-function Header({number}: header_t) {
+function Header({ number }: header_t) {
 
     return (
         <>
-            <div className="Account_settings"> account </div>
+            <img className="Account_settings" src="/account.png" />
             <h2>{number}</h2>
-            <div className="Cart">  cart </div>
+            <img className="Cart" src="/cart.png" />
         </>
     )
 }

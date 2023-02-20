@@ -1,16 +1,13 @@
+.Account_settings {
+  background-color: rgba(0, 0, 255, 0.158);
+  height: auto;
+  width: 30pt;
+  margin-left: 20pt;
+  z-index: 200;
+}
 
-
-
-.Account_settings{
-    background-color: blue;
-    height: auto;
-    width: 30pt;
-    margin-left: 20pt;
-  }
-  
-  .Cart{
-    background-color: rgb(255, 0, 106);
-    height: auto;
-    width: 30pt;
-    margin-right: 20pt;
-  }
+.Cart {
+  background-color: rgba(0, 0, 255, 0.158);
+  width: 30pt;
+  margin-right: 20pt;
+}

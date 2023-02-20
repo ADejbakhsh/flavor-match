@@ -10,7 +10,7 @@ interface recette_card_t {
 
 function Recette_card({ full_recipe }: recette_card_t) {
     const [click, setClick] = React.useState(false)
-    // parfois ca double click je ne sait pas pourquoi
+    //🚧TODO🚧 parfois ca double click je ne sait pas pourquoi
     function boolClick() {
         setClick(!click)
     }
