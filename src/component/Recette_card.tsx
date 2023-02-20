@@ -1,20 +1,16 @@
 import React from "react"
 import "../css/Recette_card.css"
-import photo from "../toDelete/pizza.jpg"
 import Resume_recette from "./Resume_recipe"
+import { recette_t } from "../types/global"
 
 
-function Recette_card() {
+// 🚧TODO🚧 comprendre et viré ce truc
+interface bug {
+        full_recipe: recette_t
+}
+
+function Recette_card({ full_recipe }: bug) {
     const [click, setClick] = React.useState(false)
-
-    // photo temps prix matériel nom
-    const recipe_name = "Pizaaa avec un nom hyper long"
-    const time = 10
-    const price = 2
-    const equipement = ["Four", "Four"] // on vois pour la langue en back
-    const recipe = ["Dans un saladier verser tout les ingredient sec", "pres chauffer le four a 200°", "mettre la pate dans le four", "blablabla touyeille ", "Enfourné la pizza et yala"]
-    const hastag = ["#pizza", "#italie", "#tomate", "#fromage"]
-
     // parfois ca double click je ne sait pas pourquoi
     function boolClick() {
         setClick(!click)
@@ -23,20 +19,20 @@ function Recette_card() {
     const default_view = () => {
         return (
             <>
-                <img src={photo} />
+                <img src={full_recipe.img_url} />
                 <div className="bottom-left">
                     <Resume_recette
-                        recipe_name={recipe_name}
-                        time={time}
-                        price={price}
-                        equipement={equipement}
-                        hastag={hastag}
+                        recipe_name={full_recipe.name}
+                        time={full_recipe.time}
+                        price={full_recipe.price}
+                        equipement={full_recipe.equipement}
+                        hastag={full_recipe.hastag}
                     />
                 </div>
             </>
         )
     }
-    const recipe_view = recipe.map((step, index) => {
+    const recipe_view = full_recipe.recipe.map((step, index) => {
         return (
             <div className="step" key={index}>
                 <div className="step-number">{index + 1}</div>
