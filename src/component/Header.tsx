@@ -9,9 +9,13 @@ function Header({ number }: header_t) {
 
     return (
         <>
-            <img className="Account_settings" src="/account.png" />
-            <h2>{number}</h2>
-            <img className="Cart" src="/cart.png" />
+            <img className="header-icons" src="/account.png" />
+            <img className="header-icons" src="/title.png" />
+            <div>
+                <img className="header-icons" src="/cart.png" />
+                <div className="pastille-number">{number}</div>
+            </div>
+
         </>
     )
 }

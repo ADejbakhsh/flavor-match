@@ -11,6 +11,7 @@ interface recette_card_t {
 function Recette_card({ full_recipe }: recette_card_t) {
     const [click, setClick] = React.useState(false)
     //🚧TODO🚧 parfois ca double click je ne sait pas pourquoi
+    // set click n'est pas reset lors du chagement de recette
     function boolClick() {
         setClick(!click)
     }
@@ -18,7 +19,7 @@ function Recette_card({ full_recipe }: recette_card_t) {
     const default_view = () => {
         return (
             <>
-                <img src={full_recipe.img_url} />
+                <img src={full_recipe.img_url} className="img"/>
                 <div className="bottom-left">
                     <Resume_recette
                         recipe_name={full_recipe.name}
