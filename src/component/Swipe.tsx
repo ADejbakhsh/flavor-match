@@ -1,10 +1,12 @@
 import React from "react"
-import "../css/Swipe.css"
+import { useLocalStorage, useReadLocalStorage } from "usehooks-ts"
 import Header from "./Header"
-import Recette_card from "./Recette_card"
 import Footer from "./Footer"
+import Recette_card from "./Recette_card"
 import { recette_t } from "../types/global"
+import "../css/Swipe.css"
 
+//fetch recette // TODO currently hard coded
 const recettes: recette_t[] = [
     {
         id: 51891,
@@ -77,18 +79,21 @@ const recettes: recette_t[] = [
 ]
 
 function Swipe() {
-    //fetch recette // TODO currently hard coded
+    // TODO see if there is a better way to set the default value
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [lastValidView, setLastValidView] = useLocalStorage("lastValidView", "Swipe")
+    const Cart_ReadOnly = useReadLocalStorage("Cart") as recette_t[] // useReadLocalStorage returns type as Value<T> instead of T. TODO fix this or understand why
+    const [Cart, setCart] = useLocalStorage<recette_t[]>("Cart", Cart_ReadOnly? Cart_ReadOnly : [])
     const [arrayRecette, setArrayRecette] = React.useState(recettes)
     const [index, setIndex] = React.useState(0)
     const [current_recette, setCurrentRecette] = React.useState(arrayRecette[index])
-    const [cart, setCart] = React.useState<recette_t[]>([])
 
     function onDeciding(bool: boolean): void {
         if (index < arrayRecette.length - 1) {
             setIndex(index + 1)
             setCurrentRecette(arrayRecette[index + 1])
         }
-        bool ? setCart([...cart, current_recette]) : null
+        bool ? setCart([...Cart, current_recette]) : null
     }
 
 
@@ -96,7 +101,7 @@ function Swipe() {
     return (
         <div className="container">
             <div className="header">
-                <Header number={cart.length} />
+                <Header number={Cart.length} />
             </div>
             <div className="recipe">
                 {/*TODO wrap  dans un truc qui permet de swip */}
