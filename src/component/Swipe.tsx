@@ -79,11 +79,12 @@ const recettes: recette_t[] = [
 ]
 
 function Swipe() {
-    // TODO see if there is a better way to set the default value
+    // TODO see if there is a better way to set the default value // probaly make the abstraction better
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [lastValidView, setLastValidView] = useLocalStorage("lastValidView", "Swipe")
     const Cart_ReadOnly = useReadLocalStorage("Cart") as recette_t[] // useReadLocalStorage returns type as Value<T> instead of T. TODO fix this or understand why
-    const [Cart, setCart] = useLocalStorage<recette_t[]>("Cart", Cart_ReadOnly? Cart_ReadOnly : [])
+    const [Cart, setCart] = useLocalStorage<recette_t[]>("Cart", Cart_ReadOnly ? Cart_ReadOnly : [])
+    
     const [arrayRecette, setArrayRecette] = React.useState(recettes)
     const [index, setIndex] = React.useState(0)
     const [current_recette, setCurrentRecette] = React.useState(arrayRecette[index])
