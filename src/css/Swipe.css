@@ -1,0 +1,37 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 6.4fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header"
+        "recipe"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.recipe {
+    grid-auto-rows: minmax(30px, auto);
+    grid-area: recipe;
+    display: flex;
+    margin: 5pt;
+    background-color: blueviolet;
+    border-radius: 20pt;
+    /*TODO is background color still relevant ? 10/02/22*/
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+}

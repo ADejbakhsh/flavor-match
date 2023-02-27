@@ -1,16 +1,24 @@
+.header-icons {
+  margin-right: 20pt;
+  margin-left: 20pt;
+  margin-top: 10pt;
+  height: 30pt;
+}
 
 
-
-.Account_settings{
-    background-color: blue;
-    height: auto;
-    width: 30pt;
-    margin-left: 20pt;
-  }
-  
-  .Cart{
-    background-color: rgb(255, 0, 106);
-    height: auto;
-    width: 30pt;
-    margin-right: 20pt;
-  }
+/* TODO redo to be reusable */
+.pastille-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0038f0;
+  color: white;
+  border-radius: 50%;
+  width: 20pt;
+  height: 20pt;
+  margin-right: 10pt;
+  font-weight: bold;
+  position: absolute;
+  right: 1pt;
+  top: 1pt;
+}
