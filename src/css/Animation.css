@@ -1,0 +1,12 @@
+/* Block browser y*/
+.animation-block-y {
+    touch-action: pan-y;
+}
+
+.animation-block-x {
+    touch-action: pan-x;
+}
+
+.animation-block {
+    touch-action: none;
+}
