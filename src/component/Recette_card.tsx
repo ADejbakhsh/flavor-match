@@ -41,6 +41,7 @@ function Recette_card({ full_recipe }: recette_card_t) {
         )
     })
 
+    /* TODO https://beta.reactjs.org/learn/reacting-to-input-with-state */
     return (
         <div className="placeholder" onClick={boolClick}>
             {click ? recipe_view : default_view()}

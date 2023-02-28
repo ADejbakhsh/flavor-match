@@ -1,6 +1,7 @@
 import React from "react"
 import { useLocalStorage, useReadLocalStorage } from "usehooks-ts"
 import { recette_t } from "../types/global"
+import Swipe_mail from "./animation/Swipe_mail"
 
 function Cart() {
     const [lastValidView, setLastValidView] = useLocalStorage("lastValidView", "Cart")
@@ -30,6 +31,7 @@ function Cart() {
         <div>
             <button onClick={returnToSwipe}>Swipe more</button>
             {displayCart()}
+            <Swipe_mail title="Cart" />
         </div>
     )
 }
