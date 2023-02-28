@@ -29,7 +29,7 @@ function Swipe_mail(info: swipe_mail_t) {
     })
 
 
-    return <animated.div className="animation-block-y" {...bind()} style={{x,y}}>{info.title}</animated.div>
+    return <animated.div className="animation-block" {...bind()} style={{x,y}}>{info.title}</animated.div>
 
 }
 
