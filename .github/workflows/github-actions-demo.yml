@@ -25,3 +25,4 @@ jobs:
   
           with:
             DEPENDENCY_FILES: npm:package.json
+            REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
