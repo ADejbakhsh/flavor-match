@@ -151,4 +151,37 @@ audit:
         - threshold: new
 
 
+#
+# Sandboxing policies
+#
+sandbox:
+  rules:
+    #
+    # File system (allow or block accesses to file/dirs)
+    #
+    #   ~/ represents home dir
+    #   . represents cwd dir
+    #
+    # NOTE: only ONE 'allow' and 'block' lines are allowed
+    #
+    fs:
+      # TODO: customize as per your threat model
+
+      # block access to home dir and all other locations (except the ones below)
+      block: ~/, /
+      allow: ., ~/.cache, ~/.npm, ~/.local, ~/.ruby, /tmp, /proc, /etc, /var, /bin, /usr/include, /usr/local, /usr/bin, /usr/lib, /usr/share, /lib
+
+    #
+    # Network (allow or block domains/ports)
+    #
+    # NOTE: only ONE 'allow' and 'block' lines are allowed
+    #
+    network:
+
+      # TODO: customize as per your threat model
+
+      # block all external network communication (except the ones below)
+      block: 0.0.0.0
+
+      # For installing PyPI, Rubygems, and NPM packages
       allow: npmjs.org:443, npmjs.com:443
