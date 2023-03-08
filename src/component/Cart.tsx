@@ -20,7 +20,9 @@ function Cart() {
         return Cart.map((recette, index) => {
             return (
                 <div key={index}>
-                    <Swipe_mail title={recette.name} />
+                    <Swipe_mail
+                        title={recette.name}
+                    />
                     {/* <button onClick={() => removeRecetteFromCart(recette)}>Remove</button> */}
                 </div>
             )
